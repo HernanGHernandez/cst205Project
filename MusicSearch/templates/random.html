@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>random</title>
+    {% block styles %}
+    {{ bootstrap.load_css() }}
+    {% endblock %}
+    {% endblock %}
+</head>
+
+<body>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}" />
+    <!-- js for sidebar -->
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/home.js') }}"></script>
+    <nav class="navbar navbar-default no-margin">
+        <div class="navbar-header fixed-brand">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" id="menu-toggle">
+                <span class="fas fa-bars" aria-hidden="true"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('home') }}"><i class="fas fa-music fa-4"></i> Random</a>
+        </div>
+        <!-- navbar-header-->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <button class="navbar-toggle collapse in" data-toggle="collapse" id="menu-toggle-2"> <span
+                            class="fas fa-bars" aria-hidden="true"></span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <!-- bs-example-navbar-collapse-1 -->
+    </nav>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+
+                <li>
+                    <a href="{{ url_for('home') }}"><span class=" fa-stack fa-lg pull-left"><i
+                                class="fas fa-home fa-stack-1x "></i></span>Home</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('random') }}"><span class="fa-stack fa-lg pull-left"><i
+                                class="fas fa-random fa-stack-1x "></i></span>Random</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('contact') }}"><span class="fa-stack fa-lg pull-left"><i
+                                class="fa fa-server fa-stack-1x "></i></span>Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid xyz">
+                <div class="row">
+                    <div class="col-lg-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+
+</body>
+
+</html>
