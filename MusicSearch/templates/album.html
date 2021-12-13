@@ -17,7 +17,9 @@
 </head>
 
 <body>
+    {% block content %}
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/album.css') }}" />
     <!-- js for sidebar -->
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/home.js') }}"></script>
     <nav class="navbar navbar-default no-margin">
@@ -64,6 +66,19 @@
             <div class="container-fluid xyz">
                 <div class="row">
                     <div class="col-lg-12">
+                        <h3>Artist Information</h3>
+                        {% for i in info %}
+                        {% if i.artist == artist_id %}
+                        <h3> Album: {{i.title}} by {{i.artist}}</h3>
+                        <img src="{{ i.get('album_cover') }}" alt="hotel cali">
+                        <br>
+                        <br>
+                        <iframe src="{{ i.get('song_list') }}" height="500" width="500" title="Spotify tracks">
+                        </iframe>
+                        <br>
+                        <a href="{{ i.get('song_list') }}"> Click to go to webpage</a>
+                        {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -72,7 +87,16 @@
     </div>
     <!-- /#wrapper -->
     <!-- jQuery -->
+    <!-- <div>
 
+        {% for i in info %}
+        {% if i.artist == artist_id %}
+        <h3>{{i.title}} by {{i.artist}}</h3>
+        <a href="{{ i.get('album_cover') }}"> </a>
+        {% endif %}
+        {% endfor %}
+    </div> -->
+    {% endblock %}
 </body>
 
 </html>

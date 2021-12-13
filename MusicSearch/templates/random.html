@@ -17,7 +17,9 @@
 </head>
 
 <body>
+    {% block content %}
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/random.css') }}" />
     <!-- js for sidebar -->
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/home.js') }}"></script>
     <nav class="navbar navbar-default no-margin">
@@ -64,6 +66,10 @@
             <div class="container-fluid xyz">
                 <div class="row">
                     <div class="col-lg-12">
+                        <h3> Random </h3>
+                        {% for i in info %}
+                        <h3>{{ i.get('artist') }}</h3>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -72,7 +78,7 @@
     </div>
     <!-- /#wrapper -->
     <!-- jQuery -->
-
+    {% endblock %}
 </body>
 
 </html>
