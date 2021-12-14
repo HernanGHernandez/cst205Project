@@ -35,10 +35,12 @@ def home():
 
 @app.route('/random', methods=('GET', 'POST'))
 def random():
+    song_stuff = song_info[randint(0,34)]
+    
     # form = SearchForm()
     # if not form.validate_on_submit():
     #     return redirect('/')
-    return render_template('random.html', info=song_info)
+    return render_template('random.html', info=song_stuff)
 
 
 # print(song_info[1])
@@ -54,7 +56,7 @@ def random():
 @app.route('/album/<artist_id>', methods=('GET', 'POST'))
 def album(artist_id):
     # print(artistList)
-    artist = ''
+    artist = artist_id
     artistList = []
     for i in song_info:
         if(artist_id == i.get('artist')):
