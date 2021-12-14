@@ -58,7 +58,7 @@ song_info = [
     {
         "artist" : "Led_Zepplin",
         "title" : "Led Zepplin IV",
-        "album_cover" : "https://townsquare.media/site/295/files/2013/11/Led-Zeppelin-IV.jpg?w=1200&h=0&zc=1&s=0&a=t&q=89",
+        "album_cover" : "https://m.media-amazon.com/images/I/81evsr3Oq0L._SL1425_.jpg",
         "genre" : "Rock",
         "year" : "1971",
         "song_list" :  "https://open.spotify.com/embed/album/5EyIDBAqhnlkAHqvPRwdbX?utm_source=generator"
@@ -146,7 +146,7 @@ song_info = [
     {
         "artist" : "Pink_Floyd",
         "title" : "The Wall",
-        "album_cover" : "https://static.wikia.nocookie.net/pinkfloyd/images/f/f5/The_Wall.jpg/revision/latest?cb=20181104235825",
+        "album_cover" : "https://static.wikia.nocookie.net/pinkfloyd/images/f/f5/The_Wall.jpg",
         "genre" : "Rock",
         "year" : "1979",
         "song_list" :  "https://open.spotify.com/embed/album/5Dbax7G8SWrP9xyzkOvy2F?utm_source=generator"
