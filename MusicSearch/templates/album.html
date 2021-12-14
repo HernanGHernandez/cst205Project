@@ -70,13 +70,13 @@
                         {% for i in info %}
                         {% if i.artist == artist_id %}
                         <h3> Album: {{i.title}} by {{i.artist}}</h3>
-                        <img src="{{ i.get('album_cover') }}" alt="hotel cali">
+                        <img src="{{ i.get('album_cover') }}" height="500" width="500" alt="hotel cali">
                         <br>
                         <br>
                         <iframe src="{{ i.get('song_list') }}" height="500" width="500" title="Spotify tracks">
                         </iframe>
                         <br>
-                        <a href="{{ i.get('song_list') }}"> Click to go to webpage</a>
+                        <a href="{{ i.get('song_list') }}" class="btn btn-outline-primary"> Click to go to webpage</a>
                         {% endif %}
                         {% endfor %}
                     </div>
