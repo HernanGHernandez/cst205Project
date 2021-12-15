@@ -15,11 +15,6 @@ from PIL import Image
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'csumb-otter'
 bootstrap = Bootstrap(app)
-foo = ['a', 'b', 'c', 'd', 'e']
-
-random_item = random.choice(foo)
-
-print(random_item)
 
 
 class Search(FlaskForm):
