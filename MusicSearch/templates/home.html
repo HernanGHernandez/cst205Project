@@ -77,56 +77,69 @@
     <!-- /#wrapper -->
     <!-- jQuery -->
 
-
-
-
-    <!-- Search Bar -->
     <div class="container mt-4">
         <div class="row d-flex justify-content-center">
             <div class="col-md-9">
                 <div class="card p-4 mt-3">
                     <h3 class="heading mt-5 text-center">Welcome! Search an Artist</h3>
                     <div class="d-flex justify-content-center px-5">
-                        <form class="form-inline my-4 my-lg-2" method="GET">
-                            <div class="search"> <input type="text" class="search-input" placeholder="Search..."
-                                    name=""> <a href="#" class="search-icon"> <i class="fa fa-search"></i> </a> </div>
+
+                        <form class="form-inline my-4 my-lg-2" method="post" action="/">
+                            {{ form.csrf_token }}
+                            {{ form.artist(size=40) }}
+                            <button class="search-icon" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
                         </form>
+
                     </div>
                     <div class="row mt-4 g-1 px-4 mb-5">
                         <div class="col-md-2">
-                            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="album image"
-                                    width="50">
-                                <div class="text-center mg-text"> <span class="mg-text">album name</span> </div>
+                            <div class="card-inner p-3 d-flex flex-column align-items-center"> <a
+                                    href="https://open.spotify.com/embed/album/5fPglEDz9YEwRgbLRvhCZy?utm_source=generator">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/70/Graduation_%28album%29.jpg/220px-Graduation_%28album%29.jpg"
+                                        width="50">
+                                    <div class="text-center mg-text"> <span class="mg-text"> </span>
+                                    </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="album"
-                                    width="50">
-                                <div class="text-center mg-text"> <span class="mg-text">album name</span> </div>
+                            <div class="card-inner p-3 d-flex flex-column align-items-center"> <a
+                                    href="https://open.spotify.com/embed/album/2widuo17g5CEC66IbzveRu?utm_source=generator">
+                                    <img src="https://m.media-amazon.com/images/I/71s+xlkhz8L._SL1425_.jpg" width="50">
+                                    <div class="text-center mg-text"> <span class="mg-text">
+                                        </span> </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="album"
-                                    width="50">
-                                <div class="text-center mg-text"> <span class="mg-text">album name</span> </div>
+                            <div class="card-inner p-3 d-flex flex-column align-items-center"> <a
+                                    href="https://open.spotify.com/embed/album/3mH6qwIy9crq0I9YQbOuDf?utm_source=generator">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Blonde_-_Frank_Ocean.jpeg/220px-Blonde_-_Frank_Ocean.jpeg"
+                                        width="50">
+                                    <div class="text-center mg-text"> <span class="mg-text"></span>
+                                    </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="album"
-                                    width="50">
-                                <div class="text-center mg-text"> <span class="mg-text">album name</span> </div>
+                            <div class="card-inner p-3 d-flex flex-column align-items-center"> <a
+                                    href="https://open.spotify.com/embed/album/0Lg1uZvI312TPqxNWShFXL?utm_source=generator">
+                                    <img src="https://m.media-amazon.com/images/I/71Ln3JLWyOL._SL1500_.jpg" width="50">
+                                    <div class="text-center mg-text"> <span class="mg-text"></span> </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="album"
-                                    width="50">
-                                <div class="text-center mg-text"> <span class="mg-text">album name</span> </div>
+                            <div class="card-inner p-3 d-flex flex-column align-items-center"> <a
+                                    href="https://open.spotify.com/embed/album/6fmnT17jc2Sc69q3nza1eD?utm_source=generator">
+                                    <img src="https://m.media-amazon.com/images/I/7194R8FlmrL._SL1089_.jpg" width="50">
+                                    <div class="text-center mg-text"> <span class="mg-text"></span> </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="album"
-                                    width="50">
-                                <div class="text-center mg-text"> <span class="mg-text">album name</span> </div>
+                            <div class="card-inner p-3 d-flex flex-column align-items-center"> <a
+                                    href="https://open.spotify.com/embed/album/3xybjP7r2VsWzwvDQipdM0?utm_source=generator">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Freudian_by_Daniel_Caesar.jpg/220px-Freudian_by_Daniel_Caesar.jpg"
+                                        width="50">
+                                    <div class="text-center mg-text"> <span class="mg-text"> </span> </div>
                             </div>
                         </div>
                     </div>
