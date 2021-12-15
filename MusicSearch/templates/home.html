@@ -77,23 +77,6 @@
     <!-- /#wrapper -->
     <!-- jQuery -->
 
-
-
-
-    <!-- <div class="container mb-4">
-        <div class="card mt-4">
-            <div class="card-body">
-                <h2 class="card-title">Add to our playlist!</h2>
-                <form method="post" action="/">
-                    {{ form.csrf_token }}
-                    {{ form.artist.label }}
-                    {{ form.artist(size=32) }}
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-        </div>
-    </div> -->
-
     <div class="container mt-4">
         <div class="row d-flex justify-content-center">
             <div class="col-md-9">
@@ -103,18 +86,10 @@
 
                         <form class="form-inline my-4 my-lg-2" method="post" action="/">
                             {{ form.csrf_token }}
-                            {{ form.artist(size=32) }}
+                            {{ form.artist(size=40) }}
                             <button class="search-icon" type="submit">
                                 <i class="fa fa-search"></i>
                             </button>
-
-
-                            <!-- <div class="search">
-                                <input type="search" class="search-input" placeholder="Search..." name="q">
-                                <button class="search-icon" type="submit">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </div> -->
                         </form>
 
                     </div>

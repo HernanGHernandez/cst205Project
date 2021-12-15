@@ -37,38 +37,22 @@ def get_artist(song_info):
     return sorted(artistList)
 
 
-def get_id(song_info, name):
-    for i in song_info:
-        print(i)
-    return i
-
 # home
 
 
 @app.route('/', methods=('GET', 'POST'))
 def home():
     form = Search()
-    if form.is_submitted():
-        print("submitted")
-    if form.validate():
-        print("valid")
 
     artists = get_artist(song_info)
     message = ""
 
     if form.validate_on_submit():
-        print("yes")
-        #flash("successfully sent ")
         userInput = form.artist.data
-        print(userInput)
-        print(artists)
         if userInput.lower() in artists:
-            print(userInput)
-            print("IN loop")
             # empty the form field
             form.artist.data = ""
             artist_id = userInput
-            print(artist_id)
             # redirect the browser to another route and template
             return redirect(url_for('album', artist_id=artist_id))
         else:
